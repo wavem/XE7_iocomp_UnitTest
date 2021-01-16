@@ -1,9 +1,9 @@
-object Form1: TForm1
+object FormMain: TFormMain
   Left = 0
   Top = 0
-  Caption = 'Form1'
-  ClientHeight = 411
-  ClientWidth = 852
+  Caption = 'FormMain'
+  ClientHeight = 667
+  ClientWidth = 1141
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,10 +14,10 @@ object Form1: TForm1
   PixelsPerInch = 96
   TextHeight = 13
   object iPlot1: TiPlot
-    Left = 176
-    Top = 104
-    Width = 500
-    Height = 200
+    Left = 216
+    Top = 168
+    Width = 929
+    Height = 529
     DataViewZHorz = 1
     DataViewZVert = 1
     PrintMarginLeft = 1.000000000000000000
@@ -296,5 +296,55 @@ object Form1: TForm1
         Font.Name = 'Arial'
         Font.Style = [fsBold]
       end>
+  end
+  object Notebook1: TNotebook
+    Left = 96
+    Top = 56
+    Width = 150
+    Height = 150
+    TabOrder = 1
+    object TPage
+      Left = 0
+      Top = 0
+      Caption = 'Default'
+    end
+  end
+  object dxRibbon1: TdxRibbon
+    Left = 0
+    Top = 0
+    Width = 1141
+    Height = 25
+    ColorSchemeName = 'Blue'
+    Contexts = <>
+    TabOrder = 2
+    TabStop = False
+    object dxRibbon1Tab1: TdxRibbonTab
+      Active = True
+      Caption = 'dxRibbon1Tab1'
+      Groups = <>
+      Index = 0
+    end
+  end
+  object dxBarManager1: TdxBarManager
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = #47569#51008' '#44256#46357
+    Font.Style = []
+    Categories.Strings = (
+      'Default')
+    Categories.ItemsVisibles = (
+      2)
+    Categories.Visibles = (
+      True)
+    PopupMenuLinks = <>
+    UseSystemFont = True
+    Left = 736
+    Top = 88
+    DockControlHeights = (
+      0
+      0
+      0
+      0)
   end
 end
