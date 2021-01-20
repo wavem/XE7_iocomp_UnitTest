@@ -3,7 +3,7 @@
 #include <vcl.h>
 #pragma hdrstop
 
-#include "Unit1.h"
+#include "Main.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma link "iComponent"
@@ -78,5 +78,32 @@ TFormMain *FormMain;
 __fastcall TFormMain::TFormMain(TComponent* Owner)
 	: TForm(Owner)
 {
+	InitProgram();
 }
 //---------------------------------------------------------------------------
+
+void __fastcall TFormMain::InitProgram() {
+
+	// Set Default Page
+	Notebook_Main->PageIndex = 0;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::ExitProgram() {
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::MenuBtn_1Click(TObject *Sender)
+{
+	Notebook_Main->PageIndex = 0;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::MenuBtn_2Click(TObject *Sender)
+{
+	Notebook_Main->PageIndex = 1;
+}
+//---------------------------------------------------------------------------
+

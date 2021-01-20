@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 
-#ifndef Unit1H
-#define Unit1H
+#ifndef MainH
+#define MainH
 //---------------------------------------------------------------------------
 #include <System.Classes.hpp>
 #include <Vcl.Controls.hpp>
@@ -78,14 +78,27 @@
 class TFormMain : public TForm
 {
 __published:	// IDE-managed Components
-	TiPlot *iPlot1;
-	TNotebook *Notebook1;
 	TdxRibbonTab *dxRibbon1Tab1;
 	TdxRibbon *dxRibbon1;
-	TdxBarManager *dxBarManager1;
+	TdxBarManager *BarMgr;
+	TdxBar *BarMgrBar1;
+	TdxBarLargeButton *MenuBtn_1;
+	TdxBarLargeButton *MenuBtn_2;
+	TPanel *___pnBase;
+	TNotebook *Notebook_Main;
+	TPanel *__pnBase_01_;
+	TPanel *__pnBase_02_;
+	TiPlot *iPlot1;
+	void __fastcall MenuBtn_1Click(TObject *Sender);
+	void __fastcall MenuBtn_2Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TFormMain(TComponent* Owner);
+
+
+public:	// START
+	void __fastcall InitProgram();
+	void __fastcall ExitProgram();
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TFormMain *FormMain;
