@@ -74,7 +74,10 @@
 #include "dxSkinWhiteprint.hpp"
 #include "dxSkinXmas2008Blue.hpp"
 #include <Vcl.ExtCtrls.hpp>
+#include "AdvMemo.hpp"
+#include "AdvGlassButton.hpp"
 //---------------------------------------------------------------------------
+#define MAX_X_CNT 86400 * 10
 class TFormMain : public TForm
 {
 __published:	// IDE-managed Components
@@ -88,7 +91,7 @@ __published:	// IDE-managed Components
 	TNotebook *Notebook_Main;
 	TPanel *__pnBase_01_;
 	TPanel *__pnBase_02_;
-	TiPlot *iPlot1;
+	TiPlot *Plot_1;
 	TPanel *__pnBase_03_;
 	TLabel *lb_Title_Page_3;
 	TLabel *lb_Title_Page_2;
@@ -97,7 +100,16 @@ __published:	// IDE-managed Components
 	TdxBarLargeButton *MenuBtn_3;
 	TdxBarLargeButton *MenuBtn_4;
 	TdxBarLargeButton *MenuBtn_5;
+	TAdvMemo *memo;
+	TAdvGlassButton *btn_Clear;
+	TAdvGlassButton *btn_Add;
+	TAdvGlassButton *btn_Add_Digital;
+	TAdvGlassButton *btn_Delete;
+	TAdvGlassButton *btn_Test;
 	void __fastcall ClickMenuButton(TObject *Sender);
+	void __fastcall btn_ClearClick(TObject *Sender);
+	void __fastcall ClickAddButton(TObject *Sender);
+	void __fastcall btn_DeleteClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TFormMain(TComponent* Owner);
@@ -106,6 +118,10 @@ public:		// User declarations
 public:	// START
 	void __fastcall InitProgram();
 	void __fastcall ExitProgram();
+	void __fastcall PrintMsg(UnicodeString _str);
+
+	double m_TotalLenPercentage_Y;
+	double m_TotalLenPercentage_X;
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TFormMain *FormMain;
