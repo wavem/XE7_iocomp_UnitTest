@@ -54,6 +54,7 @@ object FormMain: TFormMain
       Width = 1185
       Height = 743
       Align = alLeft
+      Anchors = [akLeft, akTop, akRight, akBottom]
       TabOrder = 0
       object TPage
         Left = 0
@@ -68,15 +69,19 @@ object FormMain: TFormMain
           Height = 743
           Align = alClient
           BevelOuter = bvNone
-          Color = cl3DDkShadow
+          Color = 3552822
           ParentBackground = False
           TabOrder = 0
           ExplicitLeft = -6
+          DesignSize = (
+            1185
+            743)
           object Plot_1: TiPlot
-            Left = 206
-            Top = 62
-            Width = 899
-            Height = 529
+            Left = 110
+            Top = 15
+            Width = 1051
+            Height = 690
+            Anchors = [akLeft, akTop, akRight, akBottom]
             DataViewZHorz = 1
             DataViewZVert = 1
             PrintMarginLeft = 1.000000000000000000
@@ -358,7 +363,7 @@ object FormMain: TFormMain
           end
           object btn_Clear: TAdvGlassButton
             Left = 16
-            Top = 63
+            Top = 15
             Width = 81
             Height = 32
             Cursor = crHandPoint
@@ -383,7 +388,7 @@ object FormMain: TFormMain
           end
           object btn_Add: TAdvGlassButton
             Left = 16
-            Top = 101
+            Top = 53
             Width = 81
             Height = 32
             Cursor = crHandPoint
@@ -409,7 +414,7 @@ object FormMain: TFormMain
           object btn_Add_Digital: TAdvGlassButton
             Tag = 1
             Left = 16
-            Top = 139
+            Top = 91
             Width = 81
             Height = 32
             Cursor = crHandPoint
@@ -434,7 +439,7 @@ object FormMain: TFormMain
           end
           object btn_Delete: TAdvGlassButton
             Left = 16
-            Top = 176
+            Top = 128
             Width = 81
             Height = 32
             Cursor = crHandPoint
@@ -459,7 +464,7 @@ object FormMain: TFormMain
           end
           object btn_Test: TAdvGlassButton
             Left = 16
-            Top = 214
+            Top = 166
             Width = 81
             Height = 32
             Cursor = crHandPoint
