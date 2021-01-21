@@ -267,3 +267,17 @@ void __fastcall TFormMain::btn_DeleteClick(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TFormMain::btn_Test_2Click(TObject *Sender)
+{
+	for(int i = 0 ; i < 101 ; ) {
+		Plot_2->Channel[0]->AddXY(i, rand()%60 + 20);
+		i += 10;
+	}
+
+	for(int i = 0 ; i < 101 ; ) {
+		Plot_2->Channel[1]->AddXY(i, rand()%60 + 20);
+		i += 10;
+	}
+}
+//---------------------------------------------------------------------------
+
