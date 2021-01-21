@@ -95,15 +95,11 @@ void __fastcall TFormMain::ExitProgram() {
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TFormMain::MenuBtn_1Click(TObject *Sender)
+void __fastcall TFormMain::ClickMenuButton(TObject *Sender)
 {
-	Notebook_Main->PageIndex = 0;
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFormMain::MenuBtn_2Click(TObject *Sender)
-{
-	Notebook_Main->PageIndex = 1;
+	TdxBarLargeButton *p_Btn = (TdxBarLargeButton*)Sender;
+	int t_Tag = p_Btn->Tag;
+	Notebook_Main->PageIndex = t_Tag;
 }
 //---------------------------------------------------------------------------
 

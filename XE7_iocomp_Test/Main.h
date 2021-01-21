@@ -89,8 +89,15 @@ __published:	// IDE-managed Components
 	TPanel *__pnBase_01_;
 	TPanel *__pnBase_02_;
 	TiPlot *iPlot1;
-	void __fastcall MenuBtn_1Click(TObject *Sender);
-	void __fastcall MenuBtn_2Click(TObject *Sender);
+	TPanel *__pnBase_03_;
+	TLabel *lb_Title_Page_3;
+	TLabel *lb_Title_Page_2;
+	TPanel *__pnBase_04_;
+	TPanel *__pnBase_05_;
+	TdxBarLargeButton *MenuBtn_3;
+	TdxBarLargeButton *MenuBtn_4;
+	TdxBarLargeButton *MenuBtn_5;
+	void __fastcall ClickMenuButton(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TFormMain(TComponent* Owner);
