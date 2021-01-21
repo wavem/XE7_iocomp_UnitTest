@@ -108,11 +108,16 @@ __published:	// IDE-managed Components
 	TAdvGlassButton *btn_Test_1;
 	TAdvGlassButton *btn_Test_2;
 	TiPlot *Plot_2;
+	TAdvGlassButton *btn_Test_3;
+	TiPlot *Plot_3;
+	TAdvGlassButton *btn_Test_3_2;
 	void __fastcall ClickMenuButton(TObject *Sender);
 	void __fastcall btn_ClearClick(TObject *Sender);
 	void __fastcall ClickAddButton(TObject *Sender);
 	void __fastcall btn_DeleteClick(TObject *Sender);
 	void __fastcall btn_Test_2Click(TObject *Sender);
+	void __fastcall btn_Test_3Click(TObject *Sender);
+	void __fastcall btn_Test_3_2Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TFormMain(TComponent* Owner);
