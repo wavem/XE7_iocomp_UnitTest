@@ -288,6 +288,7 @@ void __fastcall TFormMain::btn_Test_3Click(TObject *Sender)
 		i += 10;
 	}
 
+
 	for(int i = 8 ; i < 101 ; ) {
 		Plot_3->Channel[4]->AddXY(i, rand()%30 + 40);
 		i += 10;
