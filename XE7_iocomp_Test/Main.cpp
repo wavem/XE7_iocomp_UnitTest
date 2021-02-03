@@ -281,6 +281,13 @@ void __fastcall TFormMain::btn_Test_2Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TFormMain::btn_Clear_Plot_2Click(TObject *Sender)
+{
+	Plot_2->Channel[0]->Clear();
+	Plot_2->Channel[1]->Clear();
+}
+//---------------------------------------------------------------------------
+
 void __fastcall TFormMain::btn_Test_3Click(TObject *Sender)
 {
 	for(int i = 3 ; i < 101 ; ) {
