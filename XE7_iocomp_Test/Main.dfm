@@ -52,7 +52,7 @@ object FormMain: TFormMain
       Height = 743
       Align = alLeft
       Anchors = [akLeft, akTop, akRight, akBottom]
-      PageIndex = 3
+      PageIndex = 4
       TabOrder = 0
       object TPage
         Left = 0
@@ -13605,8 +13605,6 @@ object FormMain: TFormMain
         Top = 0
         HelpContext = 4
         Caption = 'Test 5'
-        ExplicitWidth = 0
-        ExplicitHeight = 0
         object __pnBase_05_: TPanel
           Left = 0
           Top = 0
@@ -13614,7 +13612,7 @@ object FormMain: TFormMain
           Height = 743
           Align = alClient
           BevelOuter = bvNone
-          Color = clActiveCaption
+          Color = 2236962
           ParentBackground = False
           TabOrder = 0
         end
