@@ -13602,8 +13602,8 @@ object FormMain: TFormMain
             1185
             743)
           object iPlot1: TiPlot
-            Left = 128
-            Top = 32
+            Left = 120
+            Top = 24
             Width = 1017
             Height = 673
             Anchors = [akLeft, akTop, akRight, akBottom]
