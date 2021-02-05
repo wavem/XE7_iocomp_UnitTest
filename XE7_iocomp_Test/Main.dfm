@@ -52,7 +52,7 @@ object FormMain: TFormMain
       Height = 743
       Align = alLeft
       Anchors = [akLeft, akTop, akRight, akBottom]
-      PageIndex = 1
+      PageIndex = 3
       TabOrder = 0
       object TPage
         Left = 0
@@ -596,7 +596,7 @@ object FormMain: TFormMain
             DataViewZHorz = 1
             DataViewZVert = 1
             ImageList0 = {
-              494C200601005C00CC0220002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+              494C200601005C00D00220002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
               000000000000360000002800000020000000800B0000010020000000000000C0
               0500000000000000000000000000000000000000000000000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
@@ -13595,7 +13595,7 @@ object FormMain: TFormMain
           Height = 743
           Align = alClient
           BevelOuter = bvNone
-          Color = clTeal
+          Color = 2236962
           ParentBackground = False
           TabOrder = 0
         end
@@ -13605,6 +13605,8 @@ object FormMain: TFormMain
         Top = 0
         HelpContext = 4
         Caption = 'Test 5'
+        ExplicitWidth = 0
+        ExplicitHeight = 0
         object __pnBase_05_: TPanel
           Left = 0
           Top = 0
