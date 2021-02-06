@@ -112,7 +112,7 @@ __published:	// IDE-managed Components
 	TiPlot *Plot_3;
 	TAdvGlassButton *btn_Test_3_2;
 	TAdvGlassButton *btn_Clear_Plot_2;
-	TiPlot *iPlot1;
+	TiPlot *Plot_4;
 	void __fastcall ClickMenuButton(TObject *Sender);
 	void __fastcall btn_ClearClick(TObject *Sender);
 	void __fastcall ClickAddButton(TObject *Sender);

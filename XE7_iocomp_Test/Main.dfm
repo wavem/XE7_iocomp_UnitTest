@@ -13601,7 +13601,7 @@ object FormMain: TFormMain
           DesignSize = (
             1185
             743)
-          object iPlot1: TiPlot
+          object Plot_4: TiPlot
             Left = 120
             Top = 24
             Width = 1017
