@@ -309,3 +309,18 @@ void __fastcall TFormMain::btn_Test_3_2Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TFormMain::btn_Test_4Click(TObject *Sender)
+{
+	for(int i = 3 ; i < 101 ; ) {
+		Plot_4->Channel[3]->AddXY(i, rand()%30 + 40);
+		i += 10;
+	}
+
+
+	for(int i = 8 ; i < 101 ; ) {
+		Plot_4->Channel[4]->AddXY(i, rand()%30 + 40);
+		i += 10;
+	}
+}
+//---------------------------------------------------------------------------
+
