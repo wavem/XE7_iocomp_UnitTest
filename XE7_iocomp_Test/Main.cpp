@@ -324,3 +324,27 @@ void __fastcall TFormMain::btn_Test_4Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TFormMain::btn_Test_4_2Click(TObject *Sender)
+{
+
+	int t_value = Plot_4->AddAnnotation();
+	//PrintMsg(t_value);
+
+
+	Plot_4->Annotation[0]->X = 10;
+
+	Plot_4->Annotation[0]->Y = 10;
+
+	Plot_4->Annotation[0]->Style = ipasText;
+	Plot_4->Annotation[0]->Text = L"hi";
+
+	Plot_4->Annotation[0]->Reference = iprtChannel;
+	Plot_4->Annotation[0]->ChannelName = Plot_4->Channel[3]->Name;
+
+
+
+
+
+}
+//---------------------------------------------------------------------------
+
