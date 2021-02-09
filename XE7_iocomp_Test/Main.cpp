@@ -327,24 +327,39 @@ void __fastcall TFormMain::btn_Test_4Click(TObject *Sender)
 void __fastcall TFormMain::btn_Test_4_2Click(TObject *Sender)
 {
 
-	int t_value = Plot_4->AddAnnotation();
-	//PrintMsg(t_value);
+	int t_value = 0;
 
+	t_value = Plot_4->AddAnnotation();
+	Plot_4->Annotation[t_value]->X = 10;
+	Plot_4->Annotation[t_value]->Y = 10;
+	Plot_4->Annotation[t_value]->Style = ipasText;
+	Plot_4->Annotation[t_value]->Text = L"10, 10";
+	Plot_4->Annotation[t_value]->Reference = iprtChannel;
+	Plot_4->Annotation[t_value]->ChannelName = Plot_4->Channel[3]->Name;
 
-	Plot_4->Annotation[0]->X = 10;
+	t_value = Plot_4->AddAnnotation();
+	Plot_4->Annotation[t_value]->X = 20;
+	Plot_4->Annotation[t_value]->Y = 20;
+	Plot_4->Annotation[t_value]->Style = ipasText;
+	Plot_4->Annotation[t_value]->Text = L"20, 20";
+	Plot_4->Annotation[t_value]->Reference = iprtChannel;
+	Plot_4->Annotation[t_value]->ChannelName = Plot_4->Channel[3]->Name;
 
-	Plot_4->Annotation[0]->Y = 10;
+	t_value = Plot_4->AddAnnotation();
+	Plot_4->Annotation[t_value]->X = 0;
+	Plot_4->Annotation[t_value]->Y = 0;
+	Plot_4->Annotation[t_value]->Style = ipasText;
+	Plot_4->Annotation[t_value]->Text = L"0, 0";
+	Plot_4->Annotation[t_value]->Reference = iprtChannel;
+	Plot_4->Annotation[t_value]->ChannelName = Plot_4->Channel[3]->Name;
 
-	Plot_4->Annotation[0]->Style = ipasText;
-	Plot_4->Annotation[0]->Text = L"hi";
-
-	Plot_4->Annotation[0]->Reference = iprtChannel;
-	Plot_4->Annotation[0]->ChannelName = Plot_4->Channel[3]->Name;
-
-
-
-
-
+	t_value = Plot_4->AddAnnotation();
+	Plot_4->Annotation[t_value]->X = -10;
+	Plot_4->Annotation[t_value]->Y = -10;
+	Plot_4->Annotation[t_value]->Style = ipasText;
+	Plot_4->Annotation[t_value]->Text = L"-10, -10";
+	Plot_4->Annotation[t_value]->Reference = iprtChannel;
+	Plot_4->Annotation[t_value]->ChannelName = Plot_4->Channel[3]->Name;
 }
 //---------------------------------------------------------------------------
 
