@@ -126,6 +126,7 @@ __published:	// IDE-managed Components
 	void __fastcall btn_Clear_Plot_2Click(TObject *Sender);
 	void __fastcall btn_Test_4Click(TObject *Sender);
 	void __fastcall btn_Test_4_2Click(TObject *Sender);
+	void __fastcall btn_Test_4_3Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TFormMain(TComponent* Owner);
