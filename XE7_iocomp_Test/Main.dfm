@@ -13651,7 +13651,7 @@ object FormMain: TFormMain
             DataFileColumnSeparator = ipdfcsTab
             DataFileFormat = ipdffText
             DefaultSaveImageFormat = ipifBitmap
-            BackGroundColor = 1447446
+            BackGroundColor = 2236962
             BorderStyle = ibsNone
             TabOrder = 0
             DataViewZHorz = 1
