@@ -13628,6 +13628,7 @@ object FormMain: TFormMain
             TitleFont.Height = -19
             TitleFont.Name = 'Arial'
             TitleFont.Style = [fsBold]
+            OnXAxisCustomizeLabel = Plot_4XAxisCustomizeLabel
             AnnotationDefaultFont.Charset = DEFAULT_CHARSET
             AnnotationDefaultFont.Color = clWhite
             AnnotationDefaultFont.Height = -11
@@ -13736,7 +13737,7 @@ object FormMain: TFormMain
                 LabelsFont.Style = []
                 LabelSeparation = 2.000000000000000000
                 LabelsRotation = ira000
-                DateTimeFormat = 'hh:nn:ss'
+                DateTimeFormat = 'ss'
                 LabelsMinLength = 5.000000000000000000
                 ScaleLineShow = True
                 ScaleLinesShow = False

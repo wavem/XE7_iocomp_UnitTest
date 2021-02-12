@@ -383,3 +383,14 @@ void __fastcall TFormMain::btn_Test_4_3Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TFormMain::Plot_4XAxisCustomizeLabel(int Index, double Value, UnicodeString &ALabel)
+{
+	if(Value == 0) {
+		ALabel = L"zero";
+	} else if(Value == 10) {
+		ALabel = L"one";
+	}
+
+}
+//---------------------------------------------------------------------------
+

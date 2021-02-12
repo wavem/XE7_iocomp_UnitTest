@@ -128,6 +128,8 @@ __published:	// IDE-managed Components
 	void __fastcall btn_Test_4Click(TObject *Sender);
 	void __fastcall btn_Test_4_2Click(TObject *Sender);
 	void __fastcall btn_Test_4_3Click(TObject *Sender);
+	void __fastcall Plot_4XAxisCustomizeLabel(int Index, double Value, UnicodeString &ALabel);
+
 private:	// User declarations
 public:		// User declarations
 	__fastcall TFormMain(TComponent* Owner);
