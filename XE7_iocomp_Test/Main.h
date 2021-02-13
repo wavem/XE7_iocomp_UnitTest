@@ -129,6 +129,7 @@ __published:	// IDE-managed Components
 	void __fastcall btn_Test_4_2Click(TObject *Sender);
 	void __fastcall btn_Test_4_3Click(TObject *Sender);
 	void __fastcall Plot_4XAxisCustomizeLabel(int Index, double Value, UnicodeString &ALabel);
+	void __fastcall btn_Test_4_4Click(TObject *Sender);
 
 private:	// User declarations
 public:		// User declarations
@@ -142,6 +143,8 @@ public:	// START
 
 	double m_TotalLenPercentage_Y;
 	double m_TotalLenPercentage_X;
+
+	TStringList* m_StrList;
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TFormMain *FormMain;

@@ -376,21 +376,72 @@ void __fastcall TFormMain::btn_Test_4_3Click(TObject *Sender)
 	Plot_4->Annotation[t_value]->Reference = iprtChannel;
 	Plot_4->Annotation[t_value]->ChannelName = Plot_4->Channel[3]->Name;
 	//Plot_4->Annotation[t_value]->UserCanMove = true;
-
-
-
-
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TFormMain::Plot_4XAxisCustomizeLabel(int Index, double Value, UnicodeString &ALabel)
 {
-	if(Value == 0) {
-		ALabel = L"zero";
-	} else if(Value == 10) {
-		ALabel = L"one";
-	}
+	if(m_StrList == NULL) return;
 
+	if(Value == 10) {
+		ALabel = m_StrList->Strings[0];
+	} else if(Value == 20) {
+		ALabel = m_StrList->Strings[1];
+	} else if(Value == 30) {
+		ALabel = m_StrList->Strings[2];
+	} else if(Value == 40) {
+		ALabel = m_StrList->Strings[3];
+	} else if(Value == 50) {
+		ALabel = m_StrList->Strings[4];
+	} else {
+		ALabel = L"";
+	}
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::btn_Test_4_4Click(TObject *Sender)
+{
+	// Define Below
+	int t_MaxStationCount = 20;
+	int t_MaxXPoint = t_MaxStationCount * 6 + 1;
+
+	m_StrList = new TStringList;
+	m_StrList->Add(L"사당");
+	m_StrList->Add(L"이수");
+	m_StrList->Add(L"동작");
+	m_StrList->Add(L"이촌");
+	m_StrList->Add(L"신용산");
+	m_StrList->Add(L"삼각지");
+	m_StrList->Add(L"숙대입구");
+	m_StrList->Add(L"서울역");
+	m_StrList->Add(L"회현");
+	m_StrList->Add(L"명동");
+
+	m_StrList->Add(L"충무로");
+	m_StrList->Add(L"동대문역사문화공원");
+	m_StrList->Add(L"동대문");
+	m_StrList->Add(L"혜화");
+	m_StrList->Add(L"한성대입구");
+
+	m_StrList->Add(L"성신여대입구");
+	m_StrList->Add(L"길음");
+	m_StrList->Add(L"미아사거리");
+	m_StrList->Add(L"미아");
+	m_StrList->Add(L"수유");
+
+	PrintMsg(m_StrList->Strings[0]);
+
+
+	Plot_4->XAxis[0]->ScrollMinMaxEnabled = true;
+	Plot_4->XAxis[0]->ScrollMin = 0;
+	Plot_4->XAxis[0]->ScrollMax = t_MaxXPoint;
+
+
+
+	for(int i = 1 ; i < t_MaxXPoint ; ) {
+		Plot_4->Channel[3]->AddXY(i, rand()%30 + 40);
+		i += 6;
+	}
 }
 //---------------------------------------------------------------------------
 
