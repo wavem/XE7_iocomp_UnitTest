@@ -382,6 +382,23 @@ void __fastcall TFormMain::btn_Test_4_3Click(TObject *Sender)
 void __fastcall TFormMain::Plot_4XAxisCustomizeLabel(int Index, double Value, UnicodeString &ALabel)
 {
 	if(m_StrList == NULL) return;
+	int t_Int = Value;
+	if(t_Int % 10 != 0) {
+		ALabel = L"";
+		return;
+	}
+
+	double temp = Value - t_Int;
+	if(temp != 0) {
+		ALabel = L"";
+		return;
+	}
+
+
+
+	ALabel = m_StrList->Strings[t_Int / 10 - 1];
+	return;
+
 
 	if(Value == 10) {
 		ALabel = m_StrList->Strings[0];
@@ -403,7 +420,8 @@ void __fastcall TFormMain::btn_Test_4_4Click(TObject *Sender)
 {
 	// Define Below
 	int t_MaxStationCount = 20;
-	int t_MaxXPoint = t_MaxStationCount * 6 + 1;
+	int t_MaxXPoint = t_MaxStationCount * 11;
+	double t_Xidx = 0;
 
 	m_StrList = new TStringList;
 	m_StrList->Add(L"사당");
@@ -411,6 +429,7 @@ void __fastcall TFormMain::btn_Test_4_4Click(TObject *Sender)
 	m_StrList->Add(L"동작");
 	m_StrList->Add(L"이촌");
 	m_StrList->Add(L"신용산");
+
 	m_StrList->Add(L"삼각지");
 	m_StrList->Add(L"숙대입구");
 	m_StrList->Add(L"서울역");
@@ -429,8 +448,6 @@ void __fastcall TFormMain::btn_Test_4_4Click(TObject *Sender)
 	m_StrList->Add(L"미아");
 	m_StrList->Add(L"수유");
 
-	PrintMsg(m_StrList->Strings[0]);
-
 
 	Plot_4->XAxis[0]->ScrollMinMaxEnabled = true;
 	Plot_4->XAxis[0]->ScrollMin = 0;
@@ -438,9 +455,16 @@ void __fastcall TFormMain::btn_Test_4_4Click(TObject *Sender)
 
 
 
-	for(int i = 1 ; i < t_MaxXPoint ; ) {
-		Plot_4->Channel[3]->AddXY(i, rand()%30 + 40);
-		i += 6;
+	t_Xidx = 8.5;
+	for(int i = 0 ; i < t_MaxStationCount ; i++) {
+		Plot_4->Channel[3]->AddXY(t_Xidx, rand()%30 + 40);
+		t_Xidx += 10;
+	}
+
+	t_Xidx = 11.5;
+	for(int i = 0 ; i < t_MaxStationCount ; i++) {
+		Plot_4->Channel[4]->AddXY(t_Xidx, rand()%30 + 40);
+		t_Xidx += 10;
 	}
 }
 //---------------------------------------------------------------------------
