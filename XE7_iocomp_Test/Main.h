@@ -123,7 +123,6 @@ __published:	// IDE-managed Components
 	void __fastcall btn_DeleteClick(TObject *Sender);
 	void __fastcall btn_Test_2Click(TObject *Sender);
 	void __fastcall btn_Test_3Click(TObject *Sender);
-	void __fastcall btn_Test_3_2Click(TObject *Sender);
 	void __fastcall btn_Clear_Plot_2Click(TObject *Sender);
 	void __fastcall btn_Test_4Click(TObject *Sender);
 	void __fastcall btn_Test_4_2Click(TObject *Sender);

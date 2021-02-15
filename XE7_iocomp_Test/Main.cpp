@@ -295,17 +295,10 @@ void __fastcall TFormMain::btn_Test_3Click(TObject *Sender)
 		i += 10;
 	}
 
-
 	for(int i = 8 ; i < 101 ; ) {
 		Plot_3->Channel[4]->AddXY(i, rand()%30 + 40);
 		i += 10;
 	}
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFormMain::btn_Test_3_2Click(TObject *Sender)
-{
-	//Plot_3->Limit[0]->
 }
 //---------------------------------------------------------------------------
 
@@ -326,7 +319,6 @@ void __fastcall TFormMain::btn_Test_4Click(TObject *Sender)
 
 void __fastcall TFormMain::btn_Test_4_2Click(TObject *Sender)
 {
-
 	int t_value = 0;
 
 	t_value = Plot_4->AddAnnotation();
@@ -394,25 +386,7 @@ void __fastcall TFormMain::Plot_4XAxisCustomizeLabel(int Index, double Value, Un
 		return;
 	}
 
-
-
 	ALabel = m_StrList->Strings[t_Int / 10 - 1];
-	return;
-
-
-	if(Value == 10) {
-		ALabel = m_StrList->Strings[0];
-	} else if(Value == 20) {
-		ALabel = m_StrList->Strings[1];
-	} else if(Value == 30) {
-		ALabel = m_StrList->Strings[2];
-	} else if(Value == 40) {
-		ALabel = m_StrList->Strings[3];
-	} else if(Value == 50) {
-		ALabel = m_StrList->Strings[4];
-	} else {
-		ALabel = L"";
-	}
 }
 //---------------------------------------------------------------------------
 
@@ -452,8 +426,6 @@ void __fastcall TFormMain::btn_Test_4_4Click(TObject *Sender)
 	Plot_4->XAxis[0]->ScrollMinMaxEnabled = true;
 	Plot_4->XAxis[0]->ScrollMin = 0;
 	Plot_4->XAxis[0]->ScrollMax = t_MaxXPoint;
-
-
 
 	t_Xidx = 8.5;
 	for(int i = 0 ; i < t_MaxStationCount ; i++) {

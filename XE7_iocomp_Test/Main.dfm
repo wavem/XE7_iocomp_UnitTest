@@ -13579,7 +13579,6 @@ object FormMain: TFormMain
             ShineColor = clGray
             TabOrder = 2
             Version = '1.3.0.2'
-            OnClick = btn_Test_3_2Click
           end
         end
       end
