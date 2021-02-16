@@ -117,6 +117,7 @@ __published:	// IDE-managed Components
 	TAdvGlassButton *btn_Test_4_2;
 	TAdvGlassButton *btn_Test_4_3;
 	TAdvGlassButton *btn_Test_4_4;
+	TAdvGlassButton *btn_Test_4_5;
 	void __fastcall ClickMenuButton(TObject *Sender);
 	void __fastcall btn_ClearClick(TObject *Sender);
 	void __fastcall ClickAddButton(TObject *Sender);
@@ -129,6 +130,7 @@ __published:	// IDE-managed Components
 	void __fastcall btn_Test_4_3Click(TObject *Sender);
 	void __fastcall Plot_4XAxisCustomizeLabel(int Index, double Value, UnicodeString &ALabel);
 	void __fastcall btn_Test_4_4Click(TObject *Sender);
+	void __fastcall btn_Test_4_5Click(TObject *Sender);
 
 private:	// User declarations
 public:		// User declarations

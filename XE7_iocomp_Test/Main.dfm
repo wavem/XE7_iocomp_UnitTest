@@ -596,7 +596,7 @@ object FormMain: TFormMain
             DataViewZHorz = 1
             DataViewZVert = 1
             ImageList0 = {
-              494C200601005C00D00220002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+              494C200601005C00D40220002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
               000000000000360000002800000020000000800B0000010020000000000000C0
               0500000000000000000000000000000000000000000000000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
@@ -14155,6 +14155,31 @@ object FormMain: TFormMain
             TabOrder = 4
             Version = '1.3.0.2'
             OnClick = btn_Test_4_4Click
+          end
+          object btn_Test_4_5: TAdvGlassButton
+            Left = 16
+            Top = 167
+            Width = 81
+            Height = 32
+            Cursor = crHandPoint
+            BackColor = clBlack
+            Caption = 'Left'
+            CornerRadius = 10
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clLime
+            Font.Height = -13
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ForeColor = clRed
+            ForceTransparent = True
+            GlowColor = clLime
+            InnerBorderColor = clBlack
+            OuterBorderColor = clLime
+            ParentFont = False
+            ShineColor = clGray
+            TabOrder = 5
+            Version = '1.3.0.2'
+            OnClick = btn_Test_4_5Click
           end
         end
       end
