@@ -438,6 +438,9 @@ void __fastcall TFormMain::btn_Test_4_4Click(TObject *Sender)
 		Plot_4->Channel[4]->AddXY(t_Xidx, rand()%30 + 40);
 		t_Xidx += 10;
 	}
+
+	Plot_4->YAxis[0]->Enabled = false;
+	Plot_4->XAxis[0]->Enabled = false;
 }
 //---------------------------------------------------------------------------
 
