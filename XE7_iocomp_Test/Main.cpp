@@ -451,9 +451,11 @@ void __fastcall TFormMain::btn_Test_4_5Click(TObject *Sender)
 	//Plot_4->YAxis[0]->Enabled = false;
 	//Plot_4->XAxis[0]->Enabled = true;
 
-	Plot_4->DataView[0]->AxesControlEnabled = true;
-	static double temp = 50;
-	Plot_4->XAxis[0]->Min = temp--;
+	//Plot_4->DataView[0]->AxesControlEnabled = true;
+	//static double temp = 50;
+
+	Plot_4->XAxis[0]->Min--;
+
 
 
 	//Plot_4->Channel[4]-
