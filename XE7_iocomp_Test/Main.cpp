@@ -454,11 +454,90 @@ void __fastcall TFormMain::btn_Test_4_5Click(TObject *Sender)
 	//Plot_4->DataView[0]->AxesControlEnabled = true;
 	//static double temp = 50;
 
+	PrintMsg(Plot_4->XAxis[0]->Min);
 	Plot_4->XAxis[0]->Min--;
 
 
 
 	//Plot_4->Channel[4]-
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::Plot_4MouseMove(TObject *Sender, TShiftState Shift, int X,
+          int Y)
+{
+	return;
+	//if(m_IsClicked)	PrintMsg(X);
+	if(!m_IsClicked) return;
+
+	UnicodeString tempStr = L"";
+	double temp = Plot_4->XAxis[0]->PixelsToPosition(X);
+	tempStr.sprintf(L"%f", temp);
+	Plot_4->XAxis[0]->Min = temp;
+	PrintMsg(tempStr);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::Plot_4MouseMoveDataView(int Index, TShiftState Shift, int X,
+		  int Y)
+{
+	if(!m_IsClicked) return;
+
+	//return;
+
+	double temp = Plot_4->XAxis[0]->PositionToPercent(X);
+	if(temp == m_Pos) return;
+
+	if(temp > m_Pos) {
+		if(Plot_4->XAxis[0]->Min >= 1) Plot_4->XAxis[0]->Min--;
+	} else {
+		if(Plot_4->XAxis[0]->Min <= Plot_4->XAxis[0]->ScrollMax - 115) Plot_4->XAxis[0]->Min++;
+	}
+
+	m_Pos = temp;
+
+	return;
+
+
+	//Plot_4->XAxis[0]->PixelsToPosition()
+	if(m_IsClicked)	{
+		PrintMsg(X);
+		//Plot_4->XAxis[0]->Min = X;
+	}
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::Plot_4MouseDownDataView(int Index, TMouseButton Button,
+          TShiftState Shift, int X, int Y)
+{
+
+	m_IsClicked = true;
+
+	return;
+
+	UnicodeString tempStr = L"";
+	tempStr.sprintf(L"X : %d, Y : %d", X, Y);
+	PrintMsg(tempStr);
+
+	double temp = Plot_4->XAxis[0]->PositionToPercent(X);
+	m_Pos = temp;
+
+	if(temp > 5) {
+
+		Plot_4->XAxis[0]->Min++;
+	} else {
+		Plot_4->XAxis[0]->Min--;
+
+	}
+	PrintMsg(Plot_4->XAxis[0]->PositionToPercent(X));
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TFormMain::Plot_4MouseUpDataView(int Index, TMouseButton Button, TShiftState Shift,
+          int X, int Y)
+{
+	m_IsClicked = false;
 }
 //---------------------------------------------------------------------------
 

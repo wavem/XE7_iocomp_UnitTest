@@ -131,6 +131,14 @@ __published:	// IDE-managed Components
 	void __fastcall Plot_4XAxisCustomizeLabel(int Index, double Value, UnicodeString &ALabel);
 	void __fastcall btn_Test_4_4Click(TObject *Sender);
 	void __fastcall btn_Test_4_5Click(TObject *Sender);
+	void __fastcall Plot_4MouseMove(TObject *Sender, TShiftState Shift, int X, int Y);
+	void __fastcall Plot_4MouseMoveDataView(int Index, TShiftState Shift, int X, int Y);
+	void __fastcall Plot_4MouseDownDataView(int Index, TMouseButton Button, TShiftState Shift,
+          int X, int Y);
+	void __fastcall Plot_4MouseUpDataView(int Index, TMouseButton Button, TShiftState Shift,
+          int X, int Y);
+
+
 
 private:	// User declarations
 public:		// User declarations
@@ -146,6 +154,9 @@ public:	// START
 	double m_TotalLenPercentage_X;
 
 	TStringList* m_StrList;
+
+	bool m_IsClicked;
+	double m_Pos;
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TFormMain *FormMain;

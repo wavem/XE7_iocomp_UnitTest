@@ -596,7 +596,7 @@ object FormMain: TFormMain
             DataViewZHorz = 1
             DataViewZVert = 1
             ImageList0 = {
-              494C200601005C00D40220002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+              494C200601005C00D80220002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
               000000000000360000002800000020000000800B0000010020000000000000C0
               0500000000000000000000000000000000000000000000000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
@@ -13605,6 +13605,7 @@ object FormMain: TFormMain
             Top = 24
             Width = 1017
             Height = 673
+            OnMouseMove = Plot_4MouseMove
             Anchors = [akLeft, akTop, akRight, akBottom]
             DataViewZHorz = 1
             DataViewZVert = 1
@@ -13627,6 +13628,9 @@ object FormMain: TFormMain
             TitleFont.Height = -19
             TitleFont.Name = 'Arial'
             TitleFont.Style = [fsBold]
+            OnMouseDownDataView = Plot_4MouseDownDataView
+            OnMouseMoveDataView = Plot_4MouseMoveDataView
+            OnMouseUpDataView = Plot_4MouseUpDataView
             OnXAxisCustomizeLabel = Plot_4XAxisCustomizeLabel
             AnnotationDefaultFont.Charset = DEFAULT_CHARSET
             AnnotationDefaultFont.Color = clWhite
